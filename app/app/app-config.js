@@ -3,7 +3,8 @@
  * @module application.config
  */
 angular.module('application.config', [
-    'ui.router'
+    'ui.router',
+    'feed'
 ])
 
     .constant('NAV_ITEMS', [
