@@ -19,15 +19,16 @@
                 <nav class="navbar navbar-fixed-top navbar-default" ng-controller="NavigationCtrl">
                     <div class="container">
                         <!-- Brand and toggle get grouped for better mobile display -->
-                        <!--                        <div class="navbar-header">
-                                                    <button type="button" class="navbar-toggle collapsed"
-                                                            data-toggle="collapse" data-target="#navbar-collapse-1">
-                                                        <span class="sr-only">Toggle navigation</span>
-                                                        <span class="icon-bar"></span>
-                                                        <span class="icon-bar"></span>
-                                                    </button>-->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed"
+                                    data-toggle="collapse" data-target="#navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
 
-                        <!-- Collect the nav links, forms, and other content for toggling -->
+                            <!--Collect the nav links, forms, and other content for toggling-->
                         <div class="collapse navbar-collapse" id="navbar-collapse-1">
                             <ul class="nav navbar-nav">
                                 <li ng-class="{active: $state.includes('{{item.state}}')}"
@@ -54,6 +55,7 @@
         <!-- Application's JS -->
         <script src="app/app.js"></script>
         <script src="app/app-config.js"></script>
+        <script src="app/service/feed.js"></script>
         <script src="app/section/feed/feed.js"></script>
         <script src="app/section/feed/feed-config.js"></script>
 
