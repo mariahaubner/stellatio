@@ -9,7 +9,7 @@ angular.module('application.config', [
 
     .constant('NAV_ITEMS', [
         {title: 'Home', state: 'home', sref: 'home', icon: 'glyphicon-home'},
-        {title: 'News Feed', state: 'feed', sref: 'feed.show', icon: 'glyphicon-list'},
+        {title: 'News Feed', state: 'feed', sref: 'feed', icon: 'glyphicon-list'},
         {title: 'About', state: 'about', sref: 'about', icon: 'glyphicon-info-sign'},
         {title: 'Contact', state: 'contact', sref: 'contact', icon: 'glyphicon-earphone'}
     ])
@@ -17,11 +17,11 @@ angular.module('application.config', [
     .config(function ($stateProvider, $urlRouterProvider) {
         'use strict';
 
-        $urlRouterProvider.otherwise('/home');
+        $urlRouterProvider.otherwise('/');
 
         $stateProvider
             .state('home', {
-                url: '/home',
+                url: '/',
                 templateUrl: 'app/view/home.tpl.html'
             })
             .state('about', {

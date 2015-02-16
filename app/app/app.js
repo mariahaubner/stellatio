@@ -13,8 +13,12 @@ angular.module('application', [
         $rootScope.$stateParams = $stateParams;
     })
 
-    .controller('NavigationCtrl', function ($scope, NAV_ITEMS) {
-        'use strict';
+    .controller('NavigationCtrl', [
+        '$scope',
+        'NAV_ITEMS',
+        function ($scope, NAV_ITEMS) {
+            'use strict';
 
-        $scope.navItems = NAV_ITEMS;
-    });
+            $scope.navItems = NAV_ITEMS;
+        }
+    ]);
