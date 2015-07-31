@@ -4,14 +4,16 @@
  */
 angular.module('application.config', [
     'ui.router',
-    'feed'
+    'feed',
+    'login'
 ])
 
     .constant('NAV_ITEMS', [
         {title: 'Home', state: 'home', sref: 'home', icon: 'glyphicon-home'},
         {title: 'News Feed', state: 'feed', sref: 'feed', icon: 'glyphicon-list'},
         {title: 'About', state: 'about', sref: 'about', icon: 'glyphicon-info-sign'},
-        {title: 'Contact', state: 'contact', sref: 'contact', icon: 'glyphicon-earphone'}
+        {title: 'Contact', state: 'contact', sref: 'contact', icon: 'glyphicon-earphone'},
+        {title: 'Login', state: 'login', sref: 'login', icon: 'glyphicon-tower'}
     ])
 
     .config(function ($stateProvider, $urlRouterProvider) {

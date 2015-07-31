@@ -9,7 +9,10 @@ angular.module('feed', [
     .controller("FeedCtrl", [
         'feedService',
         '$state',
-        function (feedService, $state) {
+        '$scope',
+        function (feedService, $state, $scope) {
+            $scope.heading = 'News Feeds';
+
             var vm = this;
 
             vm.loadFeed = function (event, feedSrc) {
@@ -26,11 +29,11 @@ angular.module('feed', [
             var vm = this;
 
             var getFeedItems = function() {
-                var feeds = [
+                return [
                     {
                         "id": 1,
-                        "name": "Wikipedia",
-                        "url": "http://de.wikipedia.org/w/api.php?action=featuredfeed&feed=featured&feedformat=atom"
+                        "name": "Postillion",
+                        "url": "http://feeds.feedburner.com/blogspot/rkEL"
                     },
                     {
                         "id": 2,
@@ -53,28 +56,21 @@ angular.module('feed', [
                         "url": "http://heise.de.feedsportal.com/c/35207/f/653902/index.rss"
                     },
                     {
+                        "id": 6,
+                        "name": "Süddeutsche",
+                        "url": "http://suche.sueddeutsche.de/?output=rss"
+                    },
+                    {
                         "id": 7,
-                        "name": "Postillion",
-                        "url": "http://feeds.feedburner.com/blogspot/rkEL"
+                        "name": "Stern",
+                        "url": "http://www.stern.de/feed/standard/all/"
                     },
                     {
                         "id": 8,
                         "name": "Spiegel",
                         "url": "http://www.spiegel.de/schlagzeilen/index.rss"
-                    },
-                    {
-                        "id": 9,
-                        "name": "Stern",
-                        "url": "http://www.stern.de/feed/standard/all/"
-                    },
-                    {
-                        "id": 6,
-                        "name": "Süddeutsche",
-                        "url": "http://suche.sueddeutsche.de/?output=rss"
                     }
                 ];
-
-                return feeds;
             };
 
             vm.navItems = getFeedItems();
